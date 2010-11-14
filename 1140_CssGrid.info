@@ -1,0 +1,25 @@
+; $Id: 1140_CssGrid.info,v 1.0 2010/11/14 14:12 waako Exp $
+name = 1140 CssGrid
+description = Theme based on 1140 CssGrid, optmised for large screens and variable width devices, more info at <a href="http://cssgrid.net">http://cssgrid.net</a>.
+version = VERSION
+core = 7.x
+engine = phptemplate
+
+; 1140 Grid system inculding CSS reset
+stylesheets[screen][] = css/1140.css
+
+; IE9 and later specific stylesheet
+stylesheets[if lte IE 9]][screen][] = css/ie.css
+
+; Type and image presets - NOT ESSENTIAL
+stylesheets[screen][] = css/typeimg.css
+
+; Minor adjustments for for 1024 monitors
+stylesheets[handheld, only screen and (max-width: 1023px)][] = css/smallerscreen.css
+
+; Resets grid for Mobile 
+stylesheets[handheld, only screen and (max-width: 767px)][] = css/mobile.css
+
+; layout and styling goes here
+stylesheets[all][] = css/layout.css
+
